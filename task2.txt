@@ -1,0 +1,42 @@
+using System;
+
+class TypeCastingExample
+{
+    static void Main()
+    {
+        int intVal = 10;
+        double doubleVal = intVal;
+        Console.WriteLine("Implicit Casting (int to double): " + doubleVal);
+        
+        double anotherDouble = 9.78;
+        int anotherInt = (int)anotherDouble;
+        Console.WriteLine("Explicit Casting (double to int): " + anotherInt);
+        
+        float floatVal = (float)anotherDouble;
+        Console.WriteLine("Explicit Casting (double to float): " + floatVal);
+        
+        long longVal = intVal;
+        Console.WriteLine("Implicit Casting (int to long): " + longVal);
+        
+        short shortVal = (short)intVal;
+        Console.WriteLine("Explicit Casting (int to short): " + shortVal);
+        
+        char charVal = (char)65;
+        Console.WriteLine("Explicit Casting (int to char): " + charVal);
+        
+        string strVal = "123";
+        int parsedInt = int.Parse(strVal);
+        Console.WriteLine("Parsing string to int: " + parsedInt);
+        
+        string anotherStr = doubleVal.ToString();
+        Console.WriteLine("Converting double to string: " + anotherStr);
+        
+        object obj = 45;
+        int unboxedInt = (int)obj;
+        Console.WriteLine("Unboxing (object to int): " + unboxedInt);
+        
+        object boxedDouble = doubleVal;
+        double unboxedDouble = (double)boxedDouble;
+        Console.WriteLine("Unboxing (object to double): " + unboxedDouble);
+    }
+}
